@@ -1,0 +1,134 @@
+@import './base/reset';
+
+$cyan-clr: #00fff7;
+$blue-100-clr: #8bacda; // soft
+$blue-300-clr: #2f415b; // line
+$blue-400-clr: #14253d; // card
+$blue-600-clr: #0d192b; // bg
+$white-clr: #ffffff;
+
+:root {
+  font-size: 20px;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background-color: $blue-600-clr;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.card {
+  background-color: $blue-400-clr;
+  max-width: 18.75rem;
+  margin: 0 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 2rem 3rem darken($color: $blue-600-clr, $amount: 4);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  &__img {
+    position: relative;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      display: block;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba($cyan-clr, 0.5) url('../img/icon-view.svg') center no-repeat;
+      opacity: 0;
+      transition: opacity 200ms ease;
+    }
+
+    &:hover::after {
+      opacity: 1;
+    }
+  }
+
+  &__content {
+    border-bottom: 1px solid $blue-100-clr;
+
+    h1 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: $white-clr;
+      margin-bottom: 0.8rem;
+      cursor: pointer;
+
+      &:hover {
+        color: $cyan-clr;
+      }
+    }
+
+    p {
+      font-size: 0.9rem;
+      font-weight: 300;
+      line-height: 1.5;
+      color: $blue-100-clr;
+      margin-bottom: 0.8rem;
+    }
+  }
+
+  &__meta {
+    display: flex;
+    justify-content: space-between;
+
+    span {
+      display: flex;
+      gap: 0.3rem;
+      margin-bottom: 0.8rem;
+
+      &:first-child h4 {
+        color: $cyan-clr;
+      }
+
+      img {
+        height: 1rem;
+      }
+
+      h4 {
+        font-size: 0.8rem;
+        font-weight: 400;
+        color: $blue-100-clr;
+      }
+    }
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+
+    img {
+      width: 1.5rem;
+      height: 1.5rem;
+      object-fit: cover;
+      border: 1px solid $white-clr;
+      border-radius: 50%;
+    }
+
+    p {
+      font-size: 0.8rem;
+      font-weight: 300;
+      color: $blue-100-clr;
+
+      a {
+        color: $white-clr;
+
+        &:hover {
+          color: $cyan-clr;
+        }
+      }
+    }
+  }
+}
