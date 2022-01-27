@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://immahmoudkamal.github.io/NFT-Card/">
-    <img src="https://raw.githubusercontent.com/imMahmoudKamal/NFT-Card/b5b0834c365f7f3b51fe1e791c446443957a6f5e/img/icon-ethereum.svg" alt="NFT Card By Mahmoud Kamal" width="100" height="100">
+    <img src="https://raw.githubusercontent.com/imMahmoudKamal/NFT-Card/b5b0834c365f7f3b51fe1e791c446443957a6f5e/img/icon-ethereum.svg" alt="NFT Card By Mahmoud Kamal" width="100">
   </a>
 </p>
 
